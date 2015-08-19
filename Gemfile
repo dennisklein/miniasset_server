@@ -28,3 +28,5 @@ gem 'spring',    group: :development
 # Use rspec
 gem 'rspec-rails', group: [:development, :test]
 
+# Use rocket_pants to create JSON API
+gem 'rocket_pants', '~> 1.0'
