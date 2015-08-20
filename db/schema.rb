@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150818172956) do
+ActiveRecord::Schema.define(version: 20150820120848) do
+
+  create_table "datacenter_racks", force: true do |t|
+    t.string   "name",        limit: 64, null: false
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "datacenter_racks", ["name"], name: "index_datacenter_racks_on_name", unique: true
 
   create_table "datacenters", force: true do |t|
     t.string   "name",        limit: 64, null: false

@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   api versions: 1, module: 'api/v1' do
     resources :datacenter, only: [:index]
+    resources :rack, only: [:index]
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
