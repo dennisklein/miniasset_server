@@ -30,3 +30,9 @@ gem 'rspec-rails', group: [:development, :test]
 
 # Use rocket_pants to create JSON API
 gem 'rocket_pants', '~> 1.0'
+
+gem 'hirb', group: :development
+gem 'pry-rails', :group => :development
+gem 'pry-doc', :group => :development
+gem 'pry-coolline', :group => :development
+gem 'pry-state', :group => :development

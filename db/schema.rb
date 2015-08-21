@@ -11,24 +11,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150820135854) do
+ActiveRecord::Schema.define(version: 20150821180434) do
+
+  create_table "datacenter_rack_locations", force: true do |t|
+    t.integer  "datacenter_rack_id"
+    t.integer  "datacenter_id"
+    t.integer  "floor"
+    t.integer  "row"
+    t.integer  "cell"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "datacenter_rack_locations", ["datacenter_id", "floor", "row", "cell"], name: "index_datacenter_rack_locations_on_unique_location", unique: true
+  add_index "datacenter_rack_locations", ["datacenter_id"], name: "index_datacenter_rack_locations_on_datacenter_id"
+  add_index "datacenter_rack_locations", ["datacenter_rack_id"], name: "index_datacenter_rack_locations_on_datacenter_rack_id", unique: true
 
   create_table "datacenter_racks", force: true do |t|
     t.string   "name",          limit: 64, null: false
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "datacenter_id"
+    t.string   "custom_prefix", limit: 5
   end
 
-  add_index "datacenter_racks", ["datacenter_id"], name: "index_datacenter_racks_on_datacenter_id"
-  add_index "datacenter_racks", ["name"], name: "index_datacenter_racks_on_name", unique: true
+  add_index "datacenter_racks", ["name"], name: "index_datacenter_racks_on_name"
 
   create_table "datacenters", force: true do |t|
-    t.string   "name",        limit: 64, null: false
+    t.string   "name",               limit: 64,              null: false
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "rack_prefix",        limit: 5
+    t.integer  "max_floors",                    default: 16
+    t.integer  "max_rows_per_floor",            default: 16
+    t.integer  "max_cells_per_row",             default: 16
   end
 
   add_index "datacenters", ["name"], name: "index_datacenters_on_name", unique: true
