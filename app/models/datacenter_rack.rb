@@ -8,6 +8,8 @@ class DatacenterRack < ActiveRecord::Base
   has_one :datacenter, through: :location
 
   def label
+    return name unless name.nil?
+
     w_f = Math.log(datacenter.max_floors, 16).ceil
     w_r = Math.log(datacenter.max_rows_per_floor, 16).ceil
     w_c = Math.log(datacenter.max_cells_per_row, 16).ceil
