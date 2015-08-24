@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20150821180434) do
   add_index "datacenter_rack_locations", ["datacenter_rack_id"], name: "index_datacenter_rack_locations_on_datacenter_rack_id", unique: true
 
   create_table "datacenter_racks", force: true do |t|
-    t.string   "name",          limit: 64, null: false
+    t.string   "name",          limit: 64
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
