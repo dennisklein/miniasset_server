@@ -1,4 +1,5 @@
 [![Inline docs](https://inch-ci.org/github/dennisklein/miniasset_server.svg?branch=master&style=flat)](http://inch-ci.org/github/dennisklein/miniasset_server)
+[![Code Climate](https://codeclimate.com/github/dennisklein/miniasset_server/badges/gpa.svg)](https://codeclimate.com/github/dennisklein/miniasset_server)
 
 # Miniasset - Datacenter Asset Management API
 
