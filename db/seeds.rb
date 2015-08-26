@@ -11,7 +11,7 @@ greencube = Datacenter.create name: 'Greencube', rack_prefix: 'GC'
 
 (0..4).each do |row|
   (0..15).each do |cell|
-    DatacenterRackLocation.create datacenter: minicube, rack: DatacenterRack.create,
+    DatacenterRackLocation.create datacenter: greencube, rack: DatacenterRack.create,
                                   floor: 6, row: row, cell: cell
   end
 end

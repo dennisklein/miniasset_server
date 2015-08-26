@@ -36,3 +36,4 @@ gem 'pry-rails', :group => :development
 gem 'pry-doc', :group => :development
 gem 'pry-coolline', :group => :development
 gem 'pry-state', :group => :development
+gem 'rubocop', :group => :development
