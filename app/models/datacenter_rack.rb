@@ -7,6 +7,8 @@ class DatacenterRack < ActiveRecord::Base
   has_one :location, class_name: 'DatacenterRackLocation'
   has_one :datacenter, through: :location
 
+  has_one :type, class_name: 'DatacenterRackType'
+
   def label
     return name unless name.nil?
 
