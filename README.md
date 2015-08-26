@@ -3,6 +3,8 @@
 
 # Miniasset - Datacenter Asset Management API
 
+*UNDER DEVELOPMENT - NOT RELEASED NOR COMPLETE*
+
 This project builds an opinionated database model to manage datacenter assets such as racks, hosts, PDUs and other components. The database is accessible via a json http API. Checkout [Miniasset CLI](https://github.com/dennisklein/miniasset).
 
 ## Tested
