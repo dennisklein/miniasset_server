@@ -6,3 +6,12 @@ minicube = Datacenter.create name: 'Minicube', rack_prefix: 'TES'
                                   floor: 1, row: row, cell: cell
   end
 end
+
+greencube = Datacenter.create name: 'Greencube', rack_prefix: 'GC'
+
+(0..4).each do |row|
+  (0..15).each do |cell|
+    DatacenterRackLocation.create datacenter: minicube, rack: DatacenterRack.create,
+                                  floor: 6, row: row, cell: cell
+  end
+end
