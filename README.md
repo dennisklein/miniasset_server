@@ -2,7 +2,8 @@
 [![Code Climate](https://codeclimate.com/github/dennisklein/miniasset_server/badges/gpa.svg)](https://codeclimate.com/github/dennisklein/miniasset_server)
 [![YARD docs](http://img.shields.io/badge/yard-docs-blue.svg)](http://www.rubydoc.info/github/dennisklein/miniasset_server/master)
 
-# Miniasset - Datacenter Asset Management API
+# Miniasset API
+## Datacenter Asset Management
 
 *UNDER DEVELOPMENT - NOT RELEASED NOR COMPLETE*
 
