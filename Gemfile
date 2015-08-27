@@ -39,3 +39,4 @@ gem 'pry-state', :group => :development
 gem 'rubocop', :group => :development
 gem 'factory_girl_rails', '~> 4.0', group: [:development, :test]
 gem 'database_cleaner', group: [:development, :test]
+gem "codeclimate-test-reporter", group: :test, require: nil
