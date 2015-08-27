@@ -37,3 +37,5 @@ gem 'pry-doc', :group => :development
 gem 'pry-coolline', :group => :development
 gem 'pry-state', :group => :development
 gem 'rubocop', :group => :development
+gem 'factory_girl_rails', '~> 4.0', group: [:development, :test]
+gem 'database_cleaner', group: [:development, :test]

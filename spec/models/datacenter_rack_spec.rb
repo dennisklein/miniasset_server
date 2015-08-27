@@ -1,27 +1,14 @@
 require 'rails_helper'
 
 RSpec.describe DatacenterRack, type: :model do
-  context 'name: validator' do
-    it 'max 64 characters' do
-      expect(DatacenterRack.new(name: 'n' * 64)).to be_valid
-      expect(DatacenterRack.new(name: 'n' * 65)).to be_invalid
+  context 'validators' do
+    it 'factory is valid' do
+      expect(build :datacenter_rack).to be_valid
     end
 
-    it 'must be present' do
-      expect(DatacenterRack.new(name: '')).to be_invalid
-      expect(DatacenterRack.new(name: '    ')).to be_invalid
-      expect(DatacenterRack.new(name: nil)).to be_invalid
-    end
-  end
-
-  context 'name: db constraint' do
-    it 'is unique' do
-      DatacenterRack.create(name: 'asdf')
-      expect { DatacenterRack.create(name: 'asdf') }.to raise_error(ActiveRecord::RecordNotUnique)
-    end
-
-    it 'is not null' do
-      expect(DatacenterRack.new(name: nil).save).not_to be
+    it 'length' do
+      expect(build :datacenter_rack, name: 'n' * 65).to be_invalid
+      expect(build :datacenter_rack, custom_prefix: 'n' * 6).to be_invalid
     end
   end
 end
