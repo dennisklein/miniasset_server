@@ -1,1 +1,1 @@
---protected --private 'app/**/*.rb' 'db/schema.rb' - CODE_OF_CONDUCT.md LICENSE docs/Main.md
+--protected --private --plugin yard-activerecord 'app/**/*.rb' 'db/schema.rb' - CODE_OF_CONDUCT.md LICENSE docs/Main.md

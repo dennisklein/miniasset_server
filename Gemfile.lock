@@ -160,6 +160,8 @@ GEM
     unicode_utils (1.4.0)
     will_paginate (3.0.7)
     yard (0.8.7.6)
+    yard-activerecord (0.0.15)
+      yard (>= 0.8.3)
 
 PLATFORMS
   ruby
@@ -181,6 +183,7 @@ DEPENDENCIES
   sdoc (~> 0.4.0)
   spring
   sqlite3
+  yard-activerecord
 
 BUNDLED WITH
    1.10.6

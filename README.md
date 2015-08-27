@@ -10,7 +10,7 @@ Datacenter Asset Management
 
 *UNDER DEVELOPMENT - NOT RELEASED NOR COMPLETE*
 
-* [Documentation](http://www.rubydoc.info/github/dennisklein/miniasset_server/master/file/docs/Main.md)
+* [Documentation](http://dennisklein.github.io/miniasset_server/docs/frames.html#!file.Main.html)
 
 ## Related projects
 
