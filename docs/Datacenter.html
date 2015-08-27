@@ -105,35 +105,7 @@
 </dl>
 <div class="clear"></div>
 
-<h2>Overview</h2><div class="docstring">
-  <div class="discussion">
-    
-<p>Datacenter model</p>
 
-<pre class="code ruby"><code class="ruby">id: integer
-name: string
-description: text
-created_at: datetime
-updated_at: datetime
-rack_prefix: string
-max_floors: integer
-max_rows_per_floor: integer
-max_cells_per_row: integer
-has_many :rack_locations (class_name :DatacenterRackLocation)
-has_many :racks (through :rack_locations)</code></pre>
-
-<p>A datacenter has many racks, each at a certain unique position (floor, row,
-cell). The attributes :rack_prefix, :max_floors, :max_rows_per_floor and
-:max_cells_per_row are used for generating rack labels in the
-DatacenterRack model.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div>
   <h2>Constant Summary</h2>
   
     <dl class="constants">
@@ -482,13 +454,13 @@ DatacenterRack model.</p>
       <pre class="lines">
 
 
-30
-31
-32
-33</pre>
+10
+11
+12
+13</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/models/datacenter.rb', line 30</span>
+      <pre class="code"><span class="info file"># File 'app/models/datacenter.rb', line 10</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_attr_with_defaults'>attr_with_defaults</span> <span class='op'>=</span> <span class='const'>DEFAULTS</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_attributes'>attributes</span><span class='rparen'>)</span>
@@ -656,10 +628,10 @@ DatacenterRack model.</p>
       <pre class="lines">
 
 
-39</pre>
+19</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/models/datacenter.rb', line 39</span>
+      <pre class="code"><span class="info file"># File 'app/models/datacenter.rb', line 19</span>
 
 <span class='id identifier rubyid_validates'>validates</span> <span class='symbol'>:max_cells_per_row</span><span class='comma'>,</span> <span class='label'>presence:</span> <span class='kw'>true</span></pre>
     </td>
@@ -719,10 +691,10 @@ DatacenterRack model.</p>
       <pre class="lines">
 
 
-37</pre>
+17</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/models/datacenter.rb', line 37</span>
+      <pre class="code"><span class="info file"># File 'app/models/datacenter.rb', line 17</span>
 
 <span class='id identifier rubyid_validates'>validates</span> <span class='symbol'>:max_floors</span><span class='comma'>,</span> <span class='label'>presence:</span> <span class='kw'>true</span></pre>
     </td>
@@ -782,10 +754,10 @@ DatacenterRack model.</p>
       <pre class="lines">
 
 
-38</pre>
+18</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/models/datacenter.rb', line 38</span>
+      <pre class="code"><span class="info file"># File 'app/models/datacenter.rb', line 18</span>
 
 <span class='id identifier rubyid_validates'>validates</span> <span class='symbol'>:max_rows_per_floor</span><span class='comma'>,</span> <span class='label'>presence:</span> <span class='kw'>true</span></pre>
     </td>
@@ -852,10 +824,10 @@ DatacenterRack model.</p>
       <pre class="lines">
 
 
-35</pre>
+15</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/models/datacenter.rb', line 35</span>
+      <pre class="code"><span class="info file"># File 'app/models/datacenter.rb', line 15</span>
 
 <span class='id identifier rubyid_validates'>validates</span> <span class='symbol'>:name</span><span class='comma'>,</span> <span class='label'>presence:</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='label'>length:</span> <span class='lbrace'>{</span> <span class='label'>maximum:</span> <span class='int'>64</span> <span class='rbrace'>}</span></pre>
     </td>
@@ -922,10 +894,10 @@ DatacenterRack model.</p>
       <pre class="lines">
 
 
-36</pre>
+16</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/models/datacenter.rb', line 36</span>
+      <pre class="code"><span class="info file"># File 'app/models/datacenter.rb', line 16</span>
 
 <span class='id identifier rubyid_validates'>validates</span> <span class='symbol'>:rack_prefix</span><span class='comma'>,</span> <span class='label'>presence:</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='label'>length:</span> <span class='lbrace'>{</span> <span class='label'>maximum:</span> <span class='int'>5</span> <span class='rbrace'>}</span></pre>
     </td>
@@ -1034,10 +1006,10 @@ DatacenterRack model.</p>
       <pre class="lines">
 
 
-41</pre>
+21</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/models/datacenter.rb', line 41</span>
+      <pre class="code"><span class="info file"># File 'app/models/datacenter.rb', line 21</span>
 
 <span class='id identifier rubyid_has_many'>has_many</span> <span class='symbol'>:rack_locations</span><span class='comma'>,</span> <span class='label'>class_name:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>DatacenterRackLocation</span><span class='tstring_end'>&#39;</span></span></pre>
     </td>
@@ -1089,10 +1061,10 @@ DatacenterRack model.</p>
       <pre class="lines">
 
 
-42</pre>
+22</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/models/datacenter.rb', line 42</span>
+      <pre class="code"><span class="info file"># File 'app/models/datacenter.rb', line 22</span>
 
 <span class='id identifier rubyid_has_many'>has_many</span> <span class='symbol'>:racks</span><span class='comma'>,</span> <span class='label'>through:</span> <span class='symbol'>:rack_locations</span></pre>
     </td>
@@ -1105,7 +1077,7 @@ DatacenterRack model.</p>
 </div>
 
     <div id="footer">
-  Generated on Thu Aug 27 19:36:50 2015 by
+  Generated on Thu Aug 27 19:42:56 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-2.1.5).
 </div>
