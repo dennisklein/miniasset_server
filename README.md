@@ -3,7 +3,8 @@
 [![YARD docs](http://img.shields.io/badge/yard-docs-blue.svg)](http://www.rubydoc.info/github/dennisklein/miniasset_server/master)
 
 # Miniasset API Server
-## Datacenter Asset Management
+
+Datacenter Asset Management
 
 *UNDER DEVELOPMENT - NOT RELEASED NOR COMPLETE*
 
