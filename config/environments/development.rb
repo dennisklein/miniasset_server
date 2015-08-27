@@ -26,3 +26,8 @@ Rails.application.configure do
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 end
+
+include FactoryGirl::Syntax::Methods
+
+require 'hirb'
+Hirb.enable
