@@ -1,0 +1,5 @@
+--protected
+--private
+--plugin yard-activerecord
+'app/**/*.rb'
+'db/schema.rb'
