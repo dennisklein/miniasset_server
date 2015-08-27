@@ -2,12 +2,16 @@
 [![Code Climate](https://codeclimate.com/github/dennisklein/miniasset_server/badges/gpa.svg)](https://codeclimate.com/github/dennisklein/miniasset_server)
 [![YARD docs](http://img.shields.io/badge/yard-docs-blue.svg)](http://www.rubydoc.info/github/dennisklein/miniasset_server/master)
 
-# Miniasset API
+# Miniasset API Server
 ## Datacenter Asset Management
 
 *UNDER DEVELOPMENT - NOT RELEASED NOR COMPLETE*
 
-This project builds an opinionated database model to manage datacenter assets such as racks, hosts, PDUs and other components. The database is accessible via a json http API. Checkout [Miniasset CLI](https://github.com/dennisklein/miniasset).
+* [Documentation](http://www.rubydoc.info/github/dennisklein/miniasset_server/master/file/docs/Main.md)
+
+## Related projects
+
+* [Miniasset CLI](https://github.com/dennisklein/miniasset)
 
 ## Tested
 
