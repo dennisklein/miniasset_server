@@ -2,4 +2,4 @@
 --private
 'app/**/*.rb'
 'db/schema.rb'
-- CODE_OF_CONDUCT.md LICENSE
+- CODE_OF_CONDUCT.md LICENSE docs/*
