@@ -1,23 +1,3 @@
-# Datacenter model
-#
-#  id: integer
-#  name: string
-#  description: text
-#  created_at: datetime
-#  updated_at: datetime
-#  rack_prefix: string
-#  max_floors: integer
-#  max_rows_per_floor: integer
-#  max_cells_per_row: integer
-#  has_many :rack_locations (class_name :DatacenterRackLocation)
-#  has_many :racks (through :rack_locations)
-#
-# A datacenter has many racks, each at a certain
-# unique position (floor, row, cell). The attributes
-# :rack_prefix, :max_floors, :max_rows_per_floor and
-# :max_cells_per_row are used for generating rack
-# labels in the DatacenterRack model.
-
 class Datacenter < ActiveRecord::Base
   include RocketPants::Cacheable
 
