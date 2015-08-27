@@ -1,5 +1,4 @@
 #!/bin/bash
-# called by Travis-CI
 
 # exit with nonzero exit code if anything fails
 set -e
